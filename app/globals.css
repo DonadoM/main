@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 29, 61, 60;
+  --nav-bg: 246, 245, 255, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-wave {
+  animation: wave 6s infinite linear;
+}
+/* Animación de la onda */
+@keyframes pan {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.animate-pan-horizontal {
+  animation: pan 20s linear infinite;
+  background: #ffffff;
+}
+
+/* Contenedor de la onda */
+.wave-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12rem; /* Altura de la onda */
+  overflow: hidden;
+  z-index: 10; /* Asegura que esté por encima del fondo */
+}
+
+/* Onda */
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Doble ancho para el efecto de desplazamiento */
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(240, 244, 255, 0.5)
+  ); /* Gradiente semi-transparente */
+  animation: wave 5s ease-in-out infinite; /* Aplica la animación */
+}
