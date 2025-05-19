@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "AgriSim: Multi-Agent Crop Simulator",
   description:
     "Advanced simulation platform for modeling complex agricultural systems using multi-agent technology.",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({
