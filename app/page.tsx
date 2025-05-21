@@ -386,7 +386,7 @@ export default function Home() {
               </h3>
               <div className="overflow-hidden rounded-lg shadow-xl">
                 <Image
-                  src="/MAS.JPG"
+                  src="/mas.JPG"
                   alt="Multi-Agent System Interactions"
                   width={500}
                   height={500}
